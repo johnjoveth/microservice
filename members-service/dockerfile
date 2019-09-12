@@ -1,5 +1,6 @@
 FROM node:8.6-alpine
 RUN echo "building image"
 RUN echo "starting npm"
+RUN npm install
 EXPOSE 3000
 CMD ["npm", "start"]

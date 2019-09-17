@@ -2,5 +2,8 @@ FROM node:8.6-alpine
 RUN echo "building image"
 RUN echo "starting npm"
 RUN npm install
+RUN mkdir -p /app/src
+WORKDIR /app/src
+COPY . .
 EXPOSE 3000
 CMD ["npm", "start"]
